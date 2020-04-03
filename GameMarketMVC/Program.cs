@@ -21,6 +21,7 @@ namespace GameMarketMVC
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseDefaultServiceProvider(option => option.ValidateScopes = false);
                 });
     }
 }
